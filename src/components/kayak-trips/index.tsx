@@ -2,7 +2,7 @@ import { createClient } from "@supabase/supabase-js";
 import { useEffect, useState } from "react";
 import { KayakTrip, columns } from "./columns";
 
-import { DataTable } from "../ui/data-table";
+import { DataTable } from "./data-table";
 
 const supabaseUrl = "https://mtuvumtbujjuwtuxhzvn.supabase.co";
 const supabaseAnonKey =
