@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { signIn } from "next-auth/react";
 
-
 export const AuthContent = () => {
 	const logInHandler = () => void signIn("google");
 
