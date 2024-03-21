@@ -6,6 +6,7 @@ import {
 	getCoreRowModel,
 	useReactTable,
 } from "@tanstack/react-table";
+import { Plus } from "lucide-react";
 
 import {
 	Table,
@@ -15,6 +16,7 @@ import {
 	TableHeader,
 	TableRow,
 } from "@/components/ui/table";
+import { Button } from "./button";
 
 interface DataTableProps<TData, TValue> {
 	columns: ColumnDef<TData, TValue>[];
@@ -30,6 +32,11 @@ export function DataTable<TData, TValue>({
 		columns,
 		getCoreRowModel: getCoreRowModel(),
 	});
+
+	const addItemHandler = async () => {
+		//TODO
+		console.log("ADD");
+	};
 
 	return (
 		<div className="rounded-md border">
@@ -74,6 +81,15 @@ export function DataTable<TData, TValue>({
 						</TableRow>
 					)}
 				</TableBody>
+				<TableHead colSpan={100} className="p-0">
+					<Button
+						onClick={addItemHandler}
+						className="flex w-full cursor-pointer items-center justify-start "
+					>
+						<Plus className="mr-2 h-4 w-4 text-neutral-700" />
+						New item
+					</Button>
+				</TableHead>
 			</Table>
 		</div>
 	);

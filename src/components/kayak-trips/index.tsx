@@ -10,15 +10,6 @@ const supabaseAnonKey =
 
 const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
-// interface KayakTrip {
-//   tripid: number;
-//   rivername: string;
-//   gaugeLevel?: string;
-//   riverGrade?: string;
-//   notes?: string;
-//   guideLink?: string;
-// }
-
 function KayakTrips() {
 	const [kayakTrips, setKayakTrips] = useState<KayakTrip[]>([]);
 
@@ -31,11 +22,7 @@ function KayakTrips() {
 		getKayakTrips();
 	}, []);
 
-	return (
-		<div className="container mx-auto py-10">
-			<DataTable columns={columns} data={kayakTrips} />
-		</div>
-	);
+	return <DataTable columns={columns} data={kayakTrips} />;
 }
 
 export default KayakTrips;
