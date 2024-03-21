@@ -2,7 +2,7 @@
 import { useSession } from "next-auth/react";
 import { AuthContent } from "@/content/landing-page/Auth";
 import { createClient } from "@supabase/supabase-js";
-import KayakTrips from "@/components/kayak-trip-lists";
+import KayakTrips from "@/components/kayak-trips";
 import { ModeToggle } from "@/components/dark-mode-toggle";
 
 const supabase = createClient(
